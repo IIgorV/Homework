@@ -1,10 +1,14 @@
 my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-positive = []
+positive_numbers = []
 index = 0
 while index < len(my_list):
-    number = (input('Введите число: '))
-    if my_list[index] < 0:
-        print('not positive numbers')
+    number = my_list[index]
+    if number > 0:
+        positive_numbers.append(number)
+        index += 1
+    else:
+        index += 1
+        continue
+    if number < 0 or index == len(my_list):
         break
-    positive.append(my_list[index])
-    index += 1
+print("Положительные числа:", positive_numbers)
