@@ -1,14 +1,9 @@
 my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-positive_numbers = []
-index = 0
-while index < len(my_list):
-    number = my_list[index]
-    if number > 0:
-        positive_numbers.append(number)
-        index += 1
-    else:
-        index += 1
-        continue
-    if number < 0 or index == len(my_list):
-        break
-print("Положительные числа:", positive_numbers)
+
+i = 0
+while i < len(my_list) and my_list[i] >= 0:
+    print(my_list[i], sep="\n")
+    i += 1
+
+if i < len(my_list):
+    print()
