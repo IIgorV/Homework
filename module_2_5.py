@@ -1,4 +1,6 @@
 def get_matrix(n, m, value):
+    if n <= 0 or m <= 0:
+        return []
     # Создаем пустую матрицу внутри ger_matrix
     matrix = []
     # Внешний цикл для строк
